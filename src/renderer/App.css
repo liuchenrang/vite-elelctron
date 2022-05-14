@@ -1,0 +1,10 @@
+@import 'antd/dist/antd.css';
+
+.App {
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+}
+.Item{
+  flex: 1,
+}
