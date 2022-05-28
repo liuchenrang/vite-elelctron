@@ -1,7 +1,6 @@
 import os from "os"
-// const os = require( "os")
 
-test('adds 1 + 2 to equal 3', () => {
+test('ip is 192.168.5.100', () => {
   let nets = os.networkInterfaces();
   let all = []
   for (const key in os.networkInterfaces()) {
@@ -12,6 +11,7 @@ test('adds 1 + 2 to equal 3', () => {
       }
     }
   }
-  console.log(os.networkInterfaces())
+  const ipv4 = all.filter(x => x.family === "IPv4").filter(x=>x.address !== "127.0.0.1");
+  console.log(ipv4)
   expect(3).toBe(3);
 });
