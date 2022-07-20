@@ -31,8 +31,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "watch:main": "yarn tsc -p src/main/tsconfig.json -w",
-    "watch:electron": "supervisor -w ./dist/main -x electron --trace-warnings --inspect=5858  dist/main/main.js",
+    "watch:main": "tsc -w -p src/main/tsconfig.json ",
+    "watch:electron": "cross-env NODE_ENV=development supervisor -w ./dist/main -x electron --trace-warnings --inspect=5858  dist/main/main.js",
     "preview": "vite preview",
     "test": "jest ",
     "build:m": "electron-builder -m"
@@ -49,6 +49,7 @@
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^1.3.0",
+    "cross-env": "^7.0.3",
     "electron": "^18.2.0",
     "electron-builder": "^23.0.3",
     "jest": "^28.1.0",

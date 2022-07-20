@@ -9,6 +9,7 @@ const fileUrl = new URL(indexFile).href;
 /**
  *
  */
+
 function createWindow(): BrowserWindow {
   // Create the browser window.
   let userWindow: null|BrowserWindow = new BrowserWindow({
@@ -20,10 +21,12 @@ function createWindow(): BrowserWindow {
     },
     width: 800,
   });
+
   // and load the index.html of the app.
   // mainWindow.loadFile(path.join(__dirname, '../html/index.html'));
   if (process.env.NODE_ENV == 'development') {
-    userWindow.loadURL('http://127.0.0.1:9000');
+    userWindow.loadURL('http://127.0.0.1:3000');
+
   } else {
     console.log('indexFile', fileUrl);
     userWindow.loadURL(fileUrl);
