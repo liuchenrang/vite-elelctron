@@ -17,7 +17,7 @@ import { ToolData } from './domain/domain';
 function App() {
   const [count, setCount] = useState(0);
   const ipAction = () => {
-      os.networkInterfaces
+    alert(1)
   }
   const ipTool:ToolData = { title: '查IP', icon: <BugOutlined /> ,action:ipAction}
   return (
